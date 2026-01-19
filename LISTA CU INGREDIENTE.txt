@@ -1,0 +1,128 @@
+LISTA CU INGREDIENTE
+    LEGUME:
+        - rosii
+        - ardei gras
+        - ardei kapia
+        - castraveti
+        - dovlecei
+        - vinete
+        - dovleac placintar
+        - morcovi
+        - radacina de telina
+        - ridichi
+        - topinambur
+        - mazare verde
+        - rubarba
+        - ceapa rosie
+        - ceapa alba
+        - usturoi
+        - praz
+        - fenicul
+        - napi
+        - pastarnac
+        - sfecla rosie
+        - avocado
+        - ciuperci
+        
+    LEGUME CU FRUNZA VERDE:
+        - salata verde
+        - spanac
+        - brocoli
+        - fasole verde
+        - varza alba
+        - varza rosie
+        - varza verde
+        - varza de Bruxelles
+        - laptuca
+        - rucola
+        - salata kale
+        - frunze de sfecla
+        - mache
+        - conopida
+        - patrunjel
+        - marar
+        - coriandru
+        - leustean
+        - busuioc
+        - oregano
+        - ceapa verde
+        - menta
+        - sparanghel
+        - telina verde
+        - varza chinezeasca
+        - andive
+
+    PROTEINE:
+        - CARNE ROSIE (vita, porc, miel, vanat, capra, cal, oaie)
+        - CARNE DE PASARE (pui, curcan, prepelita, gasca, rata)
+        - PESTE:
+            - GRAS (somon, ton, macrou, sardine, hering, sprot)
+            - SLAB (biban, cod, dorada, vivaneau, salau, merluciu, pastrav)
+
+    OUA
+
+    MEZELURI:
+        - pateu
+        - salam
+        - sunca
+        - jambon
+        - carnati proaspeti
+        - carnati uscati
+        - crenvursti
+        - fois gras
+
+    CARBOHIDRATI AMIDONOSI:
+        - orez
+        - paste
+        - hrisca
+        - mix de cereale
+        - grau
+        - bulgur
+        - gris
+        - orz
+        - ovaz
+        - mei
+        - secara
+        - couscous
+        - paine
+        - porumb
+        - cartofi
+        - cartofi dulci
+        - linte
+        - naut
+        - fasole boabe
+        - mazare uscata
+        - pastai
+
+    FRUCTE:
+        - capsuni
+        - zmeura
+        - afine
+        - mure
+        - cirese
+        - visine
+        - agrise
+        - merisoare
+        - coacaze
+        - rodie
+        - pepene galben
+        - pepene verde
+        - mere
+
+    LACTATE SI DERIVATE:
+        - lapte degresat
+        - iaurt natural
+        - iaurt grecesc degresat
+        - branza proaspata
+        - kefir
+        - mozzarella light
+        - philadelphia light
+        - branza in saramura
+        - branza batuta Madame Loik
+
+    ULEIURI:
+        - ulei de masline extravirgin
+        - ulei de rapita
+        - ulei de avocado
+        - ulei de in
+        - ulei de nuca

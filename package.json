@@ -1,0 +1,7 @@
+{
+  "name": "dieta-menu-generator",
+  "version": "1.0.0",
+  "description": "Weekly menu generator with restrictions",
+  "main": "index.js",
+  "dependencies": {}
+}
