@@ -1,35 +1,21 @@
 const fs = require('fs');
 const path = require('path');
 
+const retetele = [
+    { Nume: 'Pui copt cu cartofi la cuptor și legume', Ingrediente: ['pui', 'cartofi', 'morcovi', 'broccoli', 'ulei', 'usturoi'], Proteina: 'carne de pasare' },
+    { Nume: 'Somon la cuptor cu legume', Ingrediente: ['somon', 'morcovi', 'broccoli', 'cartofi dulci', 'ulei de masline'], Proteina: 'pește' },
+    { Nume: 'Paste Carbonara (1 dată/lună - mezeluri)', Ingrediente: ['paste', 'ouă', 'bacon', 'brânză dură', 'piperă'], Proteina: 'ouă (și mezeluri)' },
+    { Nume: 'Cotlet de pui la cuptor cu orez', Ingrediente: ['pui', 'orez', 'broccoli', 'morcovi', 'ulei'], Proteina: 'carne de pasare' },
+    { Nume: 'Peștele alb (cod/merlan) la cuptor cu lămâie', Ingrediente: ['cod/merlan', 'lămâie', 'ulei', 'usturoi', 'dafin'], Proteina: 'pește' },
+    { Nume: 'Ciorba de legume cu orez', Ingrediente: ['linte', 'morcovi', 'cartof', 'ceapă', 'roșii', 'orez'], Proteina: 'legume uscate' },
+    { Nume: 'Pui cu smântână și ciuperci', Ingrediente: ['pui', 'ciuperci', 'smântână light', 'ceapă', 'usturoi'], Proteina: 'carne de pasare' },
+    { Nume: 'Chilly con carne cu orez', Ingrediente: ['carne de vită', 'fasole boabe', 'ceapă', 'roșii', 'usturoi', 'ardei', 'orez'], Proteina: 'carne roșie' },
+    { Nume: 'Creamy meatballs (chiftele în sos)', Ingrediente: ['carne tocată vită', 'grâu', 'mazare', 'ceapă', 'usturoi'], Proteina: 'carne roșie' },
+    { Nume: 'Couscous cu piept de pui și legume', Ingrediente: ['piept de pui', 'dovlecel', 'ardei gras', 'couscous'], Proteina: 'carne de pasare' }
+];
+
 function parseRetete(content) {
-    const retete = [];
-    const lines = content.split('\n');
-    let currentRecipe = {};
-
-    lines.forEach(line => {
-        line = line.trim();
-
-        if (line && /^\d+\. /.test(line)) {
-            if (currentRecipe.Nume) {
-                retete.push(currentRecipe);
-            }
-            const recipeName = line.split('. ').slice(1).join('. ');
-            currentRecipe = { Nume: recipeName, Ingrediente: [], Proteina: '' };
-        } else if (line.startsWith('Ingrediente:')) {
-            currentRecipe.Ingrediente = line
-                .split(':')[1]
-                .split(',')
-                .map(i => i.trim());
-        } else if (line.startsWith('Proteina:')) {
-            currentRecipe.Proteina = line.split(':')[1].trim();
-        }
-    });
-
-    if (currentRecipe.Nume) {
-        retete.push(currentRecipe);
-    }
-
-    return retete;
+    return retetele;
 }
 
 function generateWeeklyMenu(retete) {
@@ -81,10 +67,7 @@ function canUseRecipe(recipe, counters, freqLimits) {
 
 exports.handler = async (event, context) => {
     try {
-        // Citește fișierul RETETE.txt din rădăcina proiectului
-        const retetePath = path.join(__dirname, '../../RETETE.txt');
-        const content = fs.readFileSync(retetePath, 'utf8');
-        const retete = parseRetete(content);
+        const retete = parseRetete();
         const menu = generateWeeklyMenu(retete);
 
         return {
